@@ -10,6 +10,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/storeNameTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
@@ -35,6 +36,7 @@
                 android:text="주문 접수 완료!"/>
 
             <TextView
+                android:id="@+id/dateTxt"
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -61,6 +63,7 @@
                 android:orientation="vertical">
                 
                 <TextView
+                    android:id="@+id/locationTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" 
                     android:text="강남구 역삼동"/>
@@ -76,11 +79,13 @@
                         android:text="결제 금액 : "/>
 
                     <TextView
+                        android:id="@+id/amountTxt"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="13,000 원"/>
                     <TextView
+                        android:id="@+id/payMethodTypeTxt"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -97,12 +102,14 @@
                 android:layout_weight="1"/>
 
             <Button
+                android:id="@+id/reviewBtn"
                 android:background="@drawable/red_boader_box"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="리뷰"/>
 
             <Button
+                android:id="@+id/reorderBtn"
                 android:layout_marginLeft="5dp"
                 android:background="#FF0000"
                 android:layout_width="80dp"

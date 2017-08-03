@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         spec3.setContent(R.id.tab3);
         myTabHost.addTab(spec3);
 
+        TabHost.TabSpec spec4 = myTabHost.newTabSpec("tab4").setIndicator("프로필");
+        spec4.setContent(R.id.tab4);
+        myTabHost.addTab(spec4);
 
 
         storeDataList.add(new StoreData("https://s3.ap-northeast-2.amazonaws.com/slws3/imgs/tje_practice/kyochon_logo.jpg", "교촌치킨-대학로점", 4.2f, 1200, 2330, 15000, true));
