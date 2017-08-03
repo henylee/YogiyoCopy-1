@@ -9,6 +9,7 @@ import java.util.List;
 
 public class StoreData {
 
+    private String imagePath;
     private String storeName;
     private float avgRating;
     private int openTime;
@@ -21,13 +22,22 @@ public class StoreData {
 
     }
 
-    public StoreData(String storeName, float avgRating, int openTime, int closeTime, int minCost, boolean isCesco) {
+    public StoreData(String imagePath, String storeName, float avgRating, int openTime, int closeTime, int minCost, boolean isCesco) {
+        this.imagePath = imagePath;
         this.storeName = storeName;
         this.avgRating = avgRating;
         this.openTime = openTime;
         this.closeTime = closeTime;
         this.minCost = minCost;
         this.isCesco = isCesco;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public String getStoreName() {

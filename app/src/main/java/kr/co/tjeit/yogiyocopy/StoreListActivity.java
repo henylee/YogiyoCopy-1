@@ -38,8 +38,8 @@ public class StoreListActivity extends AppCompatActivity {
         sortSpinner.setAdapter(sortSpinnerAdapter);
 
 
-        storeDataList.add(new StoreData("교촌치킨-대학로점", 4.2f, 1200, 2330, 15000, true));
-        storeDataList.add(new StoreData("원할머니보쌈-종로5가점", 3.8f, 1100, 300, 25000, false));
+//        storeDataList.add(new StoreData("교촌치킨-대학로점", 4.2f, 1200, 2330, 15000, true));
+//        storeDataList.add(new StoreData("원할머니보쌈-종로5가점", 3.8f, 1100, 300, 25000, false));
 
         storeAdapter = new StoreAdapter(StoreListActivity.this, storeDataList);
 
