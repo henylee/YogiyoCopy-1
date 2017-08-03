@@ -7,9 +7,12 @@ import android.widget.ListView;
 import android.widget.TabHost;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
+import kr.co.tjeit.yogiyocopy.adapter.OrderAdapter;
 import kr.co.tjeit.yogiyocopy.adapter.StoreAdapter;
+import kr.co.tjeit.yogiyocopy.data.OrderData;
 import kr.co.tjeit.yogiyocopy.data.StoreData;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,12 +23,19 @@ public class MainActivity extends AppCompatActivity {
     List<StoreData> storeDataList = new ArrayList<>();
     StoreAdapter storeAdapter;
 
+    private ListView orderListView;
+    List<OrderData> orderDataList = new ArrayList<>();
+    OrderAdapter myOrderAdapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myTabHost = (TabHost) findViewById(R.id.myTabHost);
         myTabHost.setup();
+
+        orderListView = (ListView) findViewById(R.id.orderListView);
 
         storeListView = (ListView) findViewById(R.id.storeListView);
 
@@ -54,6 +64,31 @@ public class MainActivity extends AppCompatActivity {
 
         storeAdapter = new StoreAdapter(MainActivity.this, storeDataList);
         storeListView.setAdapter(storeAdapter);
+
+        orderDataList.add(new OrderData(storeDataList.get(0),
+                Calendar.getInstance(), "종로 3가", 15000));
+        orderDataList.add(new OrderData(storeDataList.get(0),
+                Calendar.getInstance(), "종로 1가", 10000));
+        orderDataList.add(new OrderData(storeDataList.get(0),
+                Calendar.getInstance(), "을지로 3가", 30000));
+
+//        원할머니 보쌈 2번, 훼미리피자 1번, 스쿨스토어 2번
+
+
+        orderDataList.add(new OrderData(storeDataList.get(1),
+                Calendar.getInstance(), "종로 3가", 25000));
+        orderDataList.add(new OrderData(storeDataList.get(1),
+                Calendar.getInstance(), "종로 1가", 15000));
+        orderDataList.add(new OrderData(storeDataList.get(4),
+                Calendar.getInstance(), "을지로 3가", 33000));
+        orderDataList.add(new OrderData(storeDataList.get(2),
+                Calendar.getInstance(), "종로 3가", 11000));
+        orderDataList.add(new OrderData(storeDataList.get(2),
+                Calendar.getInstance(), "종로 1가", 12000));
+
+        myOrderAdapter = new OrderAdapter(MainActivity.this, orderDataList);
+
+        orderListView.setAdapter(myOrderAdapter);
 
     }
 }
