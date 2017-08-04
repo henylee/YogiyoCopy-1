@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내 프로필"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#909090"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이템스토어"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#909090"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="공지사항"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#909090"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="설정"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#909090"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="선물하기"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#909090"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="웹툰/페이지"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#909090"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="플러스친구"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#909090"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="게임하기"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#909090"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
