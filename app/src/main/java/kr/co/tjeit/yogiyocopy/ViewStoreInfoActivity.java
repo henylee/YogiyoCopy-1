@@ -1,7 +1,9 @@
 package kr.co.tjeit.yogiyocopy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -39,7 +41,6 @@ public class ViewStoreInfoActivity extends BaseActivity {
     private android.widget.LinearLayout tab3;
     private android.widget.FrameLayout tabcontent;
     private android.widget.TabHost storeTabHost;
-    private TextView isCescoImgView;
     private TextView minCostTxt;
     private TextView openAndCloseTimeTxt;
     private TextView corpStrTxt;
@@ -48,6 +49,8 @@ public class ViewStoreInfoActivity extends BaseActivity {
     MenuAdpater menuAdpater;
     List<MenuData> menuDatas = new ArrayList<>();
     ListView menuListView;
+    private TextView isCescoImgTxt;
+    private ImageView isCescoImgView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,12 +86,21 @@ public class ViewStoreInfoActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        menuListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(mContext, ComfirmOrderActivity.class);
+                intent.putExtra("메뉴데이터", mStoreData.getMenuDataList().get(position));
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
     public void setValues() {
 
-        menuAdpater = new MenuAdpater(mContext, menuDatas);
+        menuAdpater = new MenuAdpater(mContext, mStoreData.getMenuDataList());
         menuListView.setAdapter(menuAdpater);
 
         storeNameTxt.setText(mStoreData.getStoreName());
@@ -143,10 +155,11 @@ public class ViewStoreInfoActivity extends BaseActivity {
 
         if (mStoreData.isCesco()) {
             isCescoImgView.setVisibility(View.VISIBLE);
-            isCescoImgView.setText("세스코맴버스 사업장");
-        } else {
+            isCescoImgTxt.setText("세스코맴버스 사업장");
+        }
+        else {
             isCescoImgView.setVisibility(View.GONE);
-            isCescoImgView.setText("-");
+            isCescoImgTxt.setText("-");
         }
 
         corpNameTxt.setText(mStoreData.getCorpName());
@@ -162,7 +175,8 @@ public class ViewStoreInfoActivity extends BaseActivity {
         this.corpStrTxt = (TextView) findViewById(R.id.corpStrTxt);
         this.corpNameTxt = (TextView) findViewById(R.id.corpNameTxt);
         this.minCostTxt = (TextView) findViewById(R.id.minCostTxt);
-        this.isCescoImgView = (TextView) findViewById(R.id.isCescoImgView);
+        this.isCescoImgTxt = (TextView) findViewById(R.id.isCescoImgTxt);
+        this.isCescoImgView = (ImageView) findViewById(R.id.isCescoImgView);
         this.openAndCloseTimeTxt = (TextView) findViewById(R.id.openAndCloseTimeTxt);
         this.tab2 = (LinearLayout) findViewById(R.id.tab2);
         this.tab1 = (LinearLayout) findViewById(R.id.tab1);

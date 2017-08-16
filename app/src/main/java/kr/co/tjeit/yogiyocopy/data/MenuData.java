@@ -1,23 +1,25 @@
 package kr.co.tjeit.yogiyocopy.data;
 
+import java.io.Serializable;
+
 /**
  * Created by the on 2017-08-16.
  */
 
-public class MenuData {
+public class MenuData implements Serializable {
 
     public String imagePath;
     public String menuName;
-    public String menuCost;
+    public int price;
 
     public MenuData() {
 
     }
 
-    public MenuData(String imagePath, String menuName, String menuCost) {
+    public MenuData(String imagePath, String menuName, int price) {
         this.imagePath = imagePath;
         this.menuName = menuName;
-        this.menuCost = menuCost;
+        this.price = price;
     }
 
     public String getImagePath() {
@@ -36,11 +38,11 @@ public class MenuData {
         this.menuName = menuName;
     }
 
-    public String getMenuCost() {
-        return menuCost;
+    public int getPrice() {
+        return price;
     }
 
-    public void setMenuCost(String menuCost) {
-        this.menuCost = menuCost;
+    public void setPrice(int price) {
+        this.price = price;
     }
 }

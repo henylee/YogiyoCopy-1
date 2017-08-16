@@ -273,12 +273,13 @@
                                 android:textSize="15sp" />
 
                             <ImageView
+                                android:id="@+id/isCescoImgView"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/cesco_icon1" />
 
                             <TextView
-                                android:id="@+id/isCescoImgView"
+                                android:id="@+id/isCescoImgTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"

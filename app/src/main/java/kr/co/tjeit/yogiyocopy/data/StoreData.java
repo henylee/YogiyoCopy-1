@@ -20,6 +20,7 @@ public class StoreData implements Serializable {
     private String corpNumber;
     private String corpName;
     private List<String> reviews = new ArrayList<>();
+    private List<MenuData> menuDataList = new ArrayList<>();
 
     public StoreData() {
 
@@ -115,5 +116,13 @@ public class StoreData implements Serializable {
 
     public void setReviews(List<String> reviews) {
         this.reviews = reviews;
+    }
+
+    public List<MenuData> getMenuDataList() {
+        return menuDataList;
+    }
+
+    public void setMenuDataList(List<MenuData> menuDataList) {
+        this.menuDataList = menuDataList;
     }
 }
