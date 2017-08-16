@@ -1,5 +1,6 @@
 package kr.co.tjeit.yogiyocopy.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  * Created by user on 2017-08-02.
  */
 
-public class StoreData {
+public class StoreData implements Serializable {
 
     private String imagePath;
     private String storeName;
@@ -16,13 +17,15 @@ public class StoreData {
     private int closeTime;
     private int minCost;
     private boolean isCesco;
+    private String corpNumber;
+    private String corpName;
     private List<String> reviews = new ArrayList<>();
 
     public StoreData() {
 
     }
 
-    public StoreData(String imagePath, String storeName, float avgRating, int openTime, int closeTime, int minCost, boolean isCesco) {
+    public StoreData(String imagePath, String storeName, float avgRating, int openTime, int closeTime, int minCost, boolean isCesco, String corpNumber, String corpName) {
         this.imagePath = imagePath;
         this.storeName = storeName;
         this.avgRating = avgRating;
@@ -30,6 +33,8 @@ public class StoreData {
         this.closeTime = closeTime;
         this.minCost = minCost;
         this.isCesco = isCesco;
+        this.corpNumber = corpNumber;
+        this.corpName = corpName;
     }
 
     public String getImagePath() {
@@ -86,6 +91,22 @@ public class StoreData {
 
     public void setCesco(boolean cesco) {
         isCesco = cesco;
+    }
+
+    public String getCorpNumber() {
+        return corpNumber;
+    }
+
+    public void setCorpNumber(String corpNumber) {
+        this.corpNumber = corpNumber;
+    }
+
+    public String getCorpName() {
+        return corpName;
+    }
+
+    public void setCorpName(String corpName) {
+        this.corpName = corpName;
     }
 
     public List<String> getReviews() {
