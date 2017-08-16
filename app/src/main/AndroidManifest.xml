@@ -18,15 +18,16 @@
             android:name=".TabPracticeActivity"
             android:label="@string/title_activity_tab_practice"
             android:theme="@style/AppTheme" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".TempActivity" />
-        <activity android:name=".ViewPagerTestActivity"></activity>
-        <activity android:name=".ViewPagetTest2Activity">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".TempActivity" />
+        <activity android:name=".ViewPagerTestActivity"></activity>
+        <activity android:name=".ViewPagetTest2Activity">
         </activity>
         <activity android:name=".Main2Activity"></activity>
     </application>
